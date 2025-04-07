@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR"> {/* Changed lang to pt-BR */}
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CAPA Case Study – Eduardo Heleno</title>
+    {/* Substitui com o teu favicon real */}
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
+    <title>Estudo de Caso CAPA – Eduardo Heleno</title> {/* Title updated */}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -14,26 +16,36 @@
       body {
         font-family: 'Inter', sans-serif;
         scroll-behavior: smooth;
+        background-color: #f9fafb; /* Slightly off-white background */
+        color: #1f2937; /* Darker gray for better contrast */
       }
-      
+
       .gradient-bg {
         background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
       }
-      
+
       .card {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
-      
+
+      /* Enhanced hover effect for main section cards */
       .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        transform: translateY(-6px);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* Adjusted shadow for more depth */
       }
-      
+
       .stat-card {
         position: relative;
         overflow: hidden;
+        border: 1px solid #e5e7eb; /* Subtle border */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
-      
+       .stat-card:hover {
+         transform: translateY(-3px);
+         box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+
+      /* Keeping the green top border for success indication */
       .stat-card::before {
         content: "";
         position: absolute;
@@ -43,157 +55,209 @@
         height: 4px;
         background: linear-gradient(90deg, #10b981, #34d399);
       }
-      
+
       .chart-container {
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); /* Softer shadow */
         border-radius: 0.75rem;
         padding: 1.5rem;
         background-color: white;
+        border: 1px solid #e5e7eb; /* Subtle border */
+      }
+
+      /* Icon alignment helper */
+      .section-title svg {
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 0.75rem; /* 12px */
+          margin-bottom: 0.25rem; /* Align better with text */
       }
     </style>
   </head>
-  <body class="bg-gray-50 text-gray-900">
+  <body class="text-gray-800"> {/* Adjusted default text color */}
     <!-- Hero -->
     <section class="min-h-[70vh] flex flex-col justify-center items-center px-6 text-center gradient-bg text-white">
       <div class="max-w-4xl mx-auto" data-aos="fade-up">
-        <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-8">
-          The €2M Recovery Mission
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 tracking-tight"> {/* Adjusted margin and tracking */}
+          A Missão de Recuperação de €2M
         </h1>
-        <div class="w-24 h-1 bg-blue-500 mx-auto mb-8"></div>
-        <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-300">
-          How a 90-day turnaround saved a top-tier contract and redefined strategic quality leadership.
+        {/* Replaced blue line with a more thematic icon */}
+        <div class="mb-10 mx-auto text-green-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg>
+        </div>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-300 leading-relaxed"> {/* Added leading-relaxed */}
+          Como uma reviravolta de 90 dias salvou um contrato de topo e redefiniu a liderança estratégica em qualidade.
         </p>
       </div>
     </section>
 
     <!-- Main Content -->
-    <section class="py-24 px-6">
-      <div class="max-w-5xl mx-auto space-y-16">
+    <section class="py-24 px-6 bg-gray-50"> {/* Added light gray background to content area */}
+      <div class="max-w-5xl mx-auto space-y-20"> {/* Increased space between sections */}
+
         <!-- The Challenge -->
-        <div data-aos="fade-up" class="card bg-white rounded-lg shadow-xl p-12">
-          <h2 class="text-3xl font-bold mb-8 text-gray-800 border-b pb-4">The Challenge</h2>
+        <div data-aos="fade-up" class="card bg-white rounded-lg shadow-xl p-10 md:p-12"> {/* Adjusted padding */}
+           <h2 class="text-3xl font-bold mb-8 text-gray-800 border-b pb-4 section-title">
+             <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><title>Ícone Desafio</title><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+             O Desafio
+          </h2>
           <p class="text-gray-700 text-lg mb-6 leading-relaxed">
-            Our Class 2 cleanroom line was producing PCBA assemblies with a failure rate of 9.56%. This posed a €2M business risk through increased scrap and rework, delayed deliveries, and damaged client confidence.
+            A nossa linha de sala limpa Classe 2 estava a produzir conjuntos PCBA com uma taxa de falha alarmante de <strong>9.56%</strong>. Isto representava um risco de negócio de <strong>€2 Milhões</strong> devido ao aumento de refugo e retrabalho, atrasos nas entregas e abalo na confiança do cliente.
           </p>
           <p class="text-gray-700 text-lg leading-relaxed">
-            A critical audit was approaching and the client issued a conditional warning: fix the issue within 90 days or risk losing future orders.
+            Uma auditoria crítica aproximava-se e o cliente emitiu um aviso condicional: resolver o problema em <strong>90 dias</strong> ou arriscar perder futuras encomendas. A pressão era imensa.
           </p>
         </div>
 
         <!-- Strategic Approach -->
-        <div data-aos="fade-up" class="card bg-white rounded-lg shadow-xl p-12">
-          <h2 class="text-3xl font-bold mb-8 text-gray-800 border-b pb-4">Strategic Approach</h2>
-          <div class="space-y-10">
-            <div class="grid md:grid-cols-3 gap-8">
-              <div class="p-6 bg-gray-50 rounded-lg">
-                <div class="text-blue-600 font-semibold mb-1 text-sm tracking-wider uppercase">Phase 1</div>
-                <h3 class="text-xl font-semibold mb-4 text-gray-800">Root Cause Mapping</h3>
-                <p class="text-gray-700">
-                  MES data + Gemba walks + Ishikawa exposed ambiguous work instructions as a top issue, affecting shift consistency.
+        <div data-aos="fade-up" class="card bg-white rounded-lg shadow-xl p-10 md:p-12">
+          <h2 class="text-3xl font-bold mb-8 text-gray-800 border-b pb-4 section-title">
+             <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><title>Ícone Estratégia</title><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V7.618a1 1 0 01.553-.894L9 4m0 16v-8m0 0l8-4m-8 4l8 4m0 0l-5.447 2.724A1 1 0 0115 16.382V7.618a1 1 0 01.553-.894L21 4m-6 16v-8m0 0l-8-4" /></svg>
+            Abordagem Estratégica
+          </h2>
+          {/* Using border-l instead of bg-gray-50 for sub-items */}
+          <div class="space-y-8"> {/* Increased space between phases */}
+              <div class="border-l-4 border-blue-500 pl-6 py-2"> {/* Added padding Y */}
+                <div class="text-blue-600 font-semibold mb-1 text-sm tracking-wider uppercase">Fase 1</div>
+                <h3 class="text-xl font-semibold mb-2 text-gray-800">Mapeamento da Causa Raiz</h3>
+                <p class="text-gray-700 leading-relaxed">
+                  Análise de dados MES + Gemba walks + Ishikawa revelaram instruções de trabalho ambíguas como um problema principal, afetando a consistência entre turnos.
                 </p>
               </div>
-              
-              <div class="p-6 bg-gray-50 rounded-lg">
-                <div class="text-blue-600 font-semibold mb-1 text-sm tracking-wider uppercase">Phase 2</div>
-                <h3 class="text-xl font-semibold mb-4 text-gray-800">CAPA Governance</h3>
-                <p class="text-gray-700">
-                  Daily tier meetings aligned with visual dashboard. Ownership and KPIs were defined for every CAPA action.
+
+              <div class="border-l-4 border-blue-500 pl-6 py-2">
+                <div class="text-blue-600 font-semibold mb-1 text-sm tracking-wider uppercase">Fase 2</div>
+                <h3 class="text-xl font-semibold mb-2 text-gray-800">Governança CAPA</h3>
+                <p class="text-gray-700 leading-relaxed">
+                  Reuniões diárias (tier meetings) alinhadas com um dashboard visual. Definição clara de responsabilidades e KPIs para cada ação CAPA.
                 </p>
               </div>
-              
-              <div class="p-6 bg-gray-50 rounded-lg">
-                <div class="text-blue-600 font-semibold mb-1 text-sm tracking-wider uppercase">Phase 3</div>
-                <h3 class="text-xl font-semibold mb-4 text-gray-800">Precision Execution</h3>
-                <p class="text-gray-700">
-                  Used existing resources, trained all shifts under IPC Class 2 and redesigned inspection flows — all without extra budget.
+
+              <div class="border-l-4 border-blue-500 pl-6 py-2">
+                <div class="text-blue-600 font-semibold mb-1 text-sm tracking-wider uppercase">Fase 3</div>
+                <h3 class="text-xl font-semibold mb-2 text-gray-800">Execução de Precisão</h3>
+                <p class="text-gray-700 leading-relaxed">
+                  Utilização de recursos existentes, formação de todos os turnos segundo IPC Classe 2 e redesenho dos fluxos de inspeção — tudo <strong>sem orçamento extra</strong>.
                 </p>
               </div>
-            </div>
           </div>
         </div>
 
         <!-- Results -->
-        <div data-aos="fade-up" class="card bg-white rounded-lg shadow-xl p-12">
-          <h2 class="text-3xl font-bold mb-8 text-gray-800 border-b pb-4">Results</h2>
-          <div class="grid md:grid-cols-4 gap-6">
-            <div class="stat-card bg-white shadow p-6 text-center rounded-lg">
-              <p class="text-gray-600 text-sm mb-2 font-medium">PCBA Failure Rate</p>
-              <p class="text-3xl font-bold text-green-600">-32%</p>
+        <div data-aos="fade-up" class="card bg-white rounded-lg shadow-xl p-10 md:p-12">
+           <h2 class="text-3xl font-bold mb-10 text-gray-800 border-b pb-4 section-title"> {/* Increased margin bottom */}
+             <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><title>Ícone Resultados</title><path stroke-linecap="round" stroke-linejoin="round" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" /><path stroke-linecap="round" stroke-linejoin="round" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" /></svg>
+            Resultados Impactantes
+          </h2>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8"> {/* Adjusted gap */}
+            {/* Stat Card 1 */}
+            <div class="stat-card bg-white p-6 text-center rounded-lg">
+              <p class="text-gray-600 text-sm mb-1 font-medium">Taxa Falha PCBA</p>
+              <p class="text-4xl font-bold text-green-600 mb-1">-32%</p> {/* Larger number */}
+              <p class="text-xs text-gray-500">(De 9.56% para 6.5%)</p> {/* Context Added */}
             </div>
-            
-            <div class="stat-card bg-white shadow p-6 text-center rounded-lg">
-              <p class="text-gray-600 text-sm mb-2 font-medium">First Pass Yield</p>
-              <p class="text-3xl font-bold text-green-600">+15%</p>
+            {/* Stat Card 2 */}
+            <div class="stat-card bg-white p-6 text-center rounded-lg">
+              <p class="text-gray-600 text-sm mb-1 font-medium">First Pass Yield (FPY)</p>
+              <p class="text-4xl font-bold text-green-600 mb-1">+15%</p> {/* Larger number */}
+               <p class="text-xs text-gray-500">(De 82% para 97%)</p> {/* Context Added */}
             </div>
-            
-            <div class="stat-card bg-white shadow p-6 text-center rounded-lg">
-              <p class="text-gray-600 text-sm mb-2 font-medium">Cost Savings</p>
-              <p class="text-3xl font-bold text-green-600">€45K</p>
+             {/* Stat Card 3 */}
+            <div class="stat-card bg-white p-6 text-center rounded-lg">
+              <p class="text-gray-600 text-sm mb-1 font-medium">Poupança Estimada</p>
+              <p class="text-4xl font-bold text-green-600 mb-1">€45K</p> {/* Larger number */}
+              <p class="text-xs text-gray-500">(Projeção Anual)</p> {/* Context Added */}
             </div>
-            
-            <div class="stat-card bg-white shadow p-6 text-center rounded-lg">
-              <p class="text-gray-600 text-sm mb-2 font-medium">Audit Findings</p>
-              <p class="text-3xl font-bold text-green-600">Zero</p>
+             {/* Stat Card 4 */}
+            <div class="stat-card bg-white p-6 text-center rounded-lg">
+              <p class="text-gray-600 text-sm mb-1 font-medium">Auditoria Cliente</p>
+              <p class="text-4xl font-bold text-green-600 mb-1">
+                <span class="font-extrabold">ZERO</span> {/* Emphasized Zero */}
+              </p>
+              <p class="text-xs text-gray-500">(Não Conformidades)</p> {/* Context Added */}
             </div>
           </div>
         </div>
 
         <!-- Sustaining the Gains -->
-        <div data-aos="fade-up" class="card bg-white rounded-lg shadow-xl p-12">
-          <h2 class="text-3xl font-bold mb-8 text-gray-800 border-b pb-4">Sustaining the Gains</h2>
-          <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-gray-50 p-6 rounded-lg">
-              <h3 class="text-lg font-semibold mb-3 text-gray-800">Process Integration</h3>
-              <p class="text-gray-700">CAPAs embedded into Daily Management Boards with clear ownership and measurable KPIs.</p>
+        <div data-aos="fade-up" class="card bg-white rounded-lg shadow-xl p-10 md:p-12">
+           <h2 class="text-3xl font-bold mb-8 text-gray-800 border-b pb-4 section-title">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><title>Ícone Sustentabilidade</title><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m-15.357-2A8.001 8.001 0 0119.418 15m0 0H15" /></svg>
+            Sustentar os Ganhos
+          </h2>
+           {/* Using border-l again, with icons for each item */}
+          <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
+            <div class="flex items-start border-l-4 border-green-500 pl-5 py-2">
+               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600 mr-3 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><title>Ícone Integração</title><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10em-2 2-4 4M7.657 14.657A8 8 0 0118.36 3.343" /></svg>
+              <div>
+                <h3 class="text-lg font-semibold mb-1 text-gray-800">Integração de Processos</h3>
+                <p class="text-gray-700 leading-relaxed">CAPAs integradas nos Quadros de Gestão Diária com responsabilidades claras e KPIs mensuráveis.</p>
+              </div>
             </div>
-            
-            <div class="bg-gray-50 p-6 rounded-lg">
-              <h3 class="text-lg font-semibold mb-3 text-gray-800">Knowledge Transfer</h3>
-              <p class="text-gray-700">Reinforced multilingual training programs across all production shifts.</p>
+
+            <div class="flex items-start border-l-4 border-green-500 pl-5 py-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600 mr-3 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><title>Ícone Conhecimento</title><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+              <div>
+                <h3 class="text-lg font-semibold mb-1 text-gray-800">Transferência de Conhecimento</h3>
+                <p class="text-gray-700 leading-relaxed">Programas de formação multilíngues reforçados e implementados em todos os turnos de produção.</p>
+              </div>
             </div>
-            
-            <div class="bg-gray-50 p-6 rounded-lg">
-              <h3 class="text-lg font-semibold mb-3 text-gray-800">Standardization</h3>
-              <p class="text-gray-700">Deployed standardized checklists and implemented recurring visual audits.</p>
+
+            <div class="flex items-start border-l-4 border-green-500 pl-5 py-2">
+               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600 mr-3 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><title>Ícone Standardização</title><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+               <div>
+                <h3 class="text-lg font-semibold mb-1 text-gray-800">Standardização</h3>
+                <p class="text-gray-700 leading-relaxed">Checklists padronizados implementados e auditorias visuais recorrentes estabelecidas.</p>
+              </div>
             </div>
-            
-            <div class="bg-gray-50 p-6 rounded-lg">
-              <h3 class="text-lg font-semibold mb-3 text-gray-800">Performance Tracking</h3>
-              <p class="text-gray-700">Implemented live dashboards for tracking FPY and potential failure modes.</p>
+
+            <div class="flex items-start border-l-4 border-green-500 pl-5 py-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600 mr-3 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><title>Ícone Tracking</title><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m3 6V7m-3 4h.01M12 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V12l-4-4z" /></svg>
+              <div>
+                <h3 class="text-lg font-semibold mb-1 text-gray-800">Monitorização de Performance</h3>
+                <p class="text-gray-700 leading-relaxed">Dashboards em tempo real para seguir FPY e modos de falha potenciais.</p>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Career Impact -->
-        <div data-aos="fade-up" class="card bg-white rounded-lg shadow-xl p-12">
-          <h2 class="text-3xl font-bold mb-8 text-gray-800 border-b pb-4">Career Impact</h2>
-          <div class="text-lg text-gray-700 leading-relaxed space-y-4">
+        <div data-aos="fade-up" class="card bg-white rounded-lg shadow-xl p-10 md:p-12">
+           <h2 class="text-3xl font-bold mb-8 text-gray-800 border-b pb-4 section-title">
+             <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><title>Ícone Impacto Carreira</title><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+             Impacto na Carreira
+          </h2>
+          <div class="text-lg text-gray-700 leading-relaxed space-y-5"> {/* Increased spacing */}
             <p>
-              This project redefined my role from executor to strategic quality leader — orchestrating cross-functional initiatives, influencing with data, and delivering transformation under pressure.
+              Este projeto redefiniu o meu papel de executor para <strong>líder estratégico em qualidade</strong> — orquestrando iniciativas interfuncionais, influenciando através de dados e entregando transformação sob pressão.
             </p>
             <p>
-              The methodologies developed during this critical recovery mission have since become standard practice across multiple production lines, contributing to sustained quality improvements company-wide.
+              As metodologias desenvolvidas durante esta missão crítica de recuperação tornaram-se, desde então, <strong>prática standard</strong> em múltiplas linhas de produção, contribuindo para melhorias de qualidade sustentadas em toda a empresa.
             </p>
           </div>
         </div>
 
         <!-- Visualizations -->
         <div data-aos="fade-up">
-          <h2 class="text-3xl font-bold mb-8 text-gray-800 text-center">Visual Impact</h2>
+           <h2 class="text-3xl font-bold mb-10 text-gray-800 text-center section-title justify-center"> {/* Centered Title */}
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><title>Ícone Visualizações</title><path stroke-linecap="round" stroke-linejoin="round" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" /></svg>
+            Impacto Visual
+          </h2>
           <div class="grid md:grid-cols-2 gap-10">
             <div class="chart-container">
-              <h3 class="text-lg font-medium mb-4 text-gray-700">First Pass Yield Improvement</h3>
+              <h3 class="text-lg font-semibold mb-4 text-gray-700 text-center">Melhoria do First Pass Yield (FPY)</h3> {/* Bolder title */}
               <canvas id="fpyChart"></canvas>
             </div>
-            
+
             <div class="chart-container">
-              <h3 class="text-lg font-medium mb-4 text-gray-700">Scrap Cost Reduction</h3>
+              <h3 class="text-lg font-semibold mb-4 text-gray-700 text-center">Redução Custo de Refugo (€)</h3> {/* Bolder title */}
               <canvas id="scrapChart"></canvas>
             </div>
           </div>
-          
+
           <div class="mt-10 chart-container">
-            <h3 class="text-lg font-medium mb-4 text-gray-700">PCBA Failure Rate Reduction</h3>
+            <h3 class="text-lg font-semibold mb-4 text-gray-700 text-center">Redução Taxa de Falha PCBA (%)</h3> {/* Bolder title */}
             <canvas id="failureRateChart"></canvas>
           </div>
         </div>
@@ -201,9 +265,9 @@
     </section>
 
     <!-- Back Navigation -->
-    <div class="text-center py-16">
-      <a href="index.html" class="inline-block px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-300">
-        Back to Portfolio
+    <div class="text-center py-16 bg-gray-100"> {/* Consistent BG */}
+      <a href="index.html" class="inline-block px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow hover:shadow-md transform hover:-translate-y-0.5">
+        Voltar ao Portfólio
       </a>
     </div>
 
@@ -211,136 +275,133 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
-        once: true,
-        duration: 800,
-        offset: 100
+        once: true, // Animate elements only once
+        duration: 700, // Slightly faster duration
+        offset: 50 // Trigger animations a bit sooner
       });
     </script>
 
-    <!-- Chart.js Script -->
+    <!-- Chart.js Script (minor tweaks possible, but colors are mostly thematic) -->
     <script>
       // Chart options global config
       const chartOptions = {
         responsive: true,
-        maintainAspectRatio: true,
+        maintainAspectRatio: false, // Allow charts to adapt height better if needed
         plugins: {
           legend: {
             display: false
           },
           tooltip: {
-            backgroundColor: 'rgba(255, 255, 255, 0.9)',
-            titleColor: '#1f2937',
-            bodyColor: '#1f2937',
-            borderColor: '#e5e7eb',
+            backgroundColor: 'rgba(31, 41, 55, 0.9)', // Darker tooltip
+            titleColor: '#f3f4f6', // Light title
+            bodyColor: '#d1d5db',  // Light body
+            borderColor: '#4b5563', // Gray border
             borderWidth: 1,
-            cornerRadius: 8,
-            padding: 12,
-            boxPadding: 6
+            cornerRadius: 6, // Slightly less rounded
+            padding: 10, // Adjusted padding
+            boxPadding: 4,
+            usePointStyle: true, // Use point style in tooltip
           }
-        }
+        },
+        scales: {
+            y: {
+              beginAtZero: true,
+              grid: {
+                color: 'rgba(229, 231, 235, 0.5)' // Lighter grid lines
+              },
+              ticks: {
+                  color: '#4b5563' // Axis ticks color
+              }
+            },
+            x: {
+              grid: {
+                display: false // Keep x-axis grid lines hidden
+              },
+               ticks: {
+                  color: '#4b5563' // Axis ticks color
+              }
+            }
+          }
       };
-      
-      // FPY Chart
+
+      // FPY Chart (Blue - Good)
       const fpyChart = new Chart(document.getElementById('fpyChart'), {
         type: 'line',
         data: {
-          labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+          labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'], // Shorter labels
           datasets: [{
             label: 'First Pass Yield (%)',
             data: [82, 85, 89, 92, 96, 97],
-            backgroundColor: 'rgba(59, 130, 246, 0.15)',
-            borderColor: 'rgba(59, 130, 246, 0.8)',
-            borderWidth: 3,
+            backgroundColor: 'rgba(59, 130, 246, 0.1)', // Lighter fill
+            borderColor: 'rgba(59, 130, 246, 1)', // Solid blue line
+            borderWidth: 2.5, // Slightly thicker line
             tension: 0.4,
             fill: true,
-            pointRadius: 4,
-            pointHoverRadius: 6,
+            pointRadius: 3,
+            pointHoverRadius: 5,
             pointBackgroundColor: 'rgba(59, 130, 246, 1)'
           }]
         },
         options: {
           ...chartOptions,
-          plugins: {
-            ...chartOptions.plugins,
-            tooltip: {
-              ...chartOptions.plugins.tooltip,
-              callbacks: {
-                label: ctx => `${ctx.raw}% FPY`
-              }
-            }
-          },
-          scales: {
-            y: {
-              beginAtZero: true,
-              max: 100,
-              grid: {
-                color: 'rgba(224, 224, 224, 0.2)'
-              }
-            },
-            x: {
-              grid: {
-                display: false
-              }
-            }
-          }
+           plugins: {
+             ...chartOptions.plugins,
+             tooltip: {
+               ...chartOptions.plugins.tooltip,
+               callbacks: {
+                 label: ctx => `${ctx.raw}% FPY`
+               }
+             }
+           },
+          scales: { ...chartOptions.scales, y: { ...chartOptions.scales.y, max: 100 } } // Keep max 100 for percentage
         }
       });
 
-      // Scrap Chart
+      // Scrap Chart (Red - Problem/Cost)
       const scrapChart = new Chart(document.getElementById('scrapChart'), {
         type: 'bar',
         data: {
-          labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+          labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
           datasets: [{
-            label: 'Scrap Cost (€)',
+            label: 'Custo Refugo (€)',
             data: [140000, 130000, 120000, 110000, 100000, 95000],
             backgroundColor: 'rgba(239, 68, 68, 0.7)',
-            borderColor: 'rgba(239, 68, 68, 0.9)',
+            borderColor: 'rgba(239, 68, 68, 1)',
             borderWidth: 1,
-            borderRadius: 4
+            borderRadius: 4,
+            hoverBackgroundColor: 'rgba(239, 68, 68, 0.9)' // Darker on hover
           }]
         },
         options: {
           ...chartOptions,
-          plugins: {
-            ...chartOptions.plugins,
-            tooltip: {
-              ...chartOptions.plugins.tooltip,
-              callbacks: {
-                label: ctx => `€${ctx.raw.toLocaleString()}`
-              }
-            }
-          },
-          scales: {
-            y: {
-              grid: {
-                color: 'rgba(224, 224, 224, 0.2)'
-              }
-            },
-            x: {
-              grid: {
-                display: false
-              }
-            }
-          }
+           plugins: {
+             ...chartOptions.plugins,
+             tooltip: {
+               ...chartOptions.plugins.tooltip,
+               callbacks: {
+                 label: ctx => `€${ctx.raw.toLocaleString('pt-PT')}` // Formatting for PT
+               }
+             }
+           },
+           scales: chartOptions.scales
         }
       });
 
-      // Failure Rate Chart
+      // Failure Rate Chart (Green - Success/Improvement)
       const failureRateChart = new Chart(document.getElementById('failureRateChart'), {
         type: 'line',
         data: {
-          labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+          labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
           datasets: [{
-            label: 'Failure Rate (%)',
+            label: 'Taxa Falha (%)',
             data: [9.56, 8.8, 8.2, 7.5, 6.9, 6.5],
-            backgroundColor: 'rgba(16, 185, 129, 0.15)',
-            borderColor: 'rgba(16, 185, 129, 0.8)',
-            borderWidth: 3,
+            backgroundColor: 'rgba(16, 185, 129, 0.1)', // Lighter fill
+            borderColor: 'rgba(16, 185, 129, 1)', // Solid green line
+            borderWidth: 2.5,
             tension: 0.4,
             fill: true,
-            pointRadius: 4,
-            pointHoverRadius: 6,
+            pointRadius: 3,
+            pointHoverRadius: 5,
             pointBackgroundColor: 'rgba(16, 185, 129, 1)'
           }]
         },
@@ -351,22 +412,11 @@
             tooltip: {
               ...chartOptions.plugins.tooltip,
               callbacks: {
-                label: ctx => `${ctx.raw}% Failure Rate`
+                label: ctx => `${ctx.raw}% Taxa Falha`
               }
             }
           },
-          scales: {
-            y: {
-              grid: {
-                color: 'rgba(224, 224, 224, 0.2)'
-              }
-            },
-            x: {
-              grid: {
-                display: false
-              }
-            }
-          }
+          scales: chartOptions.scales
         }
       });
     </script>
