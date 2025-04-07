@@ -1,1 +1,224 @@
-<!-- index.html será preenchido com o conteúdo final -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eduardo Heleno – Architect of Excellence</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      // Smooth scroll for internal links
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+            });
+          });
+        });
+      });
+    </script>
+  </head>
+  <body class="bg-white text-gray-900 font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow z-50">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="font-bold text-lg">Eduardo Heleno</div>
+        <div class="space-x-6 text-sm">
+          <a href="#projects" class="text-gray-700 hover:text-blue-600">Projects</a>
+          <a href="#results" class="text-gray-700 hover:text-blue-600">Results</a>
+          <a href="#about" class="text-gray-700 hover:text-blue-600">About</a>
+          <a href="#dashboard" class="text-gray-700 hover:text-blue-600">Dashboard</a>
+          <a href="#" class="text-gray-700 hover:text-blue-600">CV</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Spacer for fixed nav -->
+    <div class="h-20"></div>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex flex-col justify-center items-center px-6 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold leading-tight max-w-3xl" data-aos="fade-up">
+        The Architect of Excellence
+      </h1>
+      <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-xl" data-aos="fade-up" data-aos-delay="100">
+        Engineering impactful solutions in quality and operational excellence.
+      </p>
+      <a
+        href="#projects"
+        class="mt-10 inline-block bg-black text-white px-6 py-3 rounded-full text-lg font-medium hover:bg-gray-900 transition-all duration-300"
+        data-aos="fade-up" data-aos-delay="200"
+      >
+        Explore my work
+      </a>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-gray-50 py-20 px-6">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl md:text-5xl font-bold mb-12" data-aos="fade-up">Featured Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <a href="#" class="group block p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 text-left" data-aos="fade-up">
+            <h3 class="text-xl font-semibold group-hover:text-black">CAPA-Driven Reduction of PCBA Failures</h3>
+            <p class="mt-4 text-gray-600 text-sm">
+              Reduced failure rate by 32% and scrap costs by €45.000 through advanced root cause analysis and quality engineering.
+            </p>
+            <span class="mt-6 inline-block text-sm font-medium text-blue-500 group-hover:underline">View case →</span>
+          </a>
+          <a href="#" class="group block p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 text-left" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="text-xl font-semibold group-hover:text-black">SmartSQE Digital Assistant</h3>
+            <p class="mt-4 text-gray-600 text-sm">
+              AI-powered toolkit that supports Supplier Quality Engineers during NPI and production phases with guided flows and auto-generated reports.
+            </p>
+            <span class="mt-6 inline-block text-sm font-medium text-blue-500 group-hover:underline">View prototype →</span>
+          </a>
+          <a href="#" class="group block p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 text-left" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="text-xl font-semibold group-hover:text-black">MFLOW Continuous Improvement</h3>
+            <p class="mt-4 text-gray-600 text-sm">
+              Lean Six Sigma initiative to improve manufacturing flow and reduce cycle time by 17% in high-mix low-volume electronics production.
+            </p>
+            <span class="mt-6 inline-block text-sm font-medium text-blue-500 group-hover:underline">View project →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proven Results Section -->
+    <section id="results" class="bg-white py-20 px-6">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl md:text-5xl font-bold mb-12" data-aos="fade-up">Proven Results</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
+          <div class="bg-gray-50 p-8 rounded-xl shadow text-center">
+            <p class="text-5xl font-bold text-green-600">32%</p>
+            <p class="mt-2 text-gray-600">Reduction in PCBA failure rate</p>
+          </div>
+          <div class="bg-gray-50 p-8 rounded-xl shadow text-center">
+            <p class="text-5xl font-bold text-green-600">15%</p>
+            <p class="mt-2 text-gray-600">Increase in First Pass Yield (FPY)</p>
+          </div>
+          <div class="bg-gray-50 p-8 rounded-xl shadow text-center">
+            <p class="text-5xl font-bold text-green-600">€45K</p>
+            <p class="mt-2 text-gray-600">Reduction in annual scrap cost</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 bg-white">
+      <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+        <h2 class="text-3xl md:text-5xl font-bold mb-8">About Me</h2>
+        <p class="text-lg text-gray-700">
+          I'm Eduardo Heleno, a Quality Engineer specialized in high-complexity electronics and operational excellence. With strong roots in biotechnology and certified Lean Six Sigma Black Belt, I bridge technical depth with strategic thinking.
+          <br><br>
+          I’ve led initiatives that reduced PCBA failure rates by 32% and scrap costs by €45.000, combining statistical insight with hands-on process improvement. My work spans from cleanroom environments to supplier quality, always focused on driving lasting impact through quality as a growth engine.
+          <br><br>
+          I design solutions, not just systems. Quality is not compliance — it’s architecture for excellence.
+        </p>
+      </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="bg-gray-50 py-20 px-6">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl md:text-5xl font-bold mb-12" data-aos="fade-up">Interactive Dashboard</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <canvas id="fpyChart"></canvas>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <canvas id="scrapChart"></canvas>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-md col-span-1 md:col-span-2">
+            <canvas id="failureRateChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-10 px-6 text-center">
+      <div class="text-gray-600 text-sm">
+        © 2025 Eduardo Heleno. All rights reserved. | <a href="#" class="text-blue-500 hover:underline">LinkedIn</a> | <a href="mailto:eduardo@example.com" class="text-blue-500 hover:underline">Contact</a>
+      </div>
+    </footer>
+
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ once: true });
+    </script>
+
+    <!-- Chart.js Script -->
+    <script>
+      const fpyChart = new Chart(document.getElementById('fpyChart'), {
+        type: 'line',
+        data: {
+          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+          datasets: [{
+            label: 'First Pass Yield (%)',
+            data: [82, 85, 89, 92, 96, 97],
+            backgroundColor: 'rgba(59, 130, 246, 0.2)',
+            borderColor: 'rgba(59, 130, 246, 1)',
+            borderWidth: 2,
+            tension: 0.3,
+            fill: true,
+            pointRadius: 5,
+            pointHoverRadius: 7
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { display: true } },
+          scales: { y: { beginAtZero: true, max: 100 } }
+        }
+      });
+
+      const scrapChart = new Chart(document.getElementById('scrapChart'), {
+        type: 'bar',
+        data: {
+          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+          datasets: [{
+            label: 'Scrap Cost (€)',
+            data: [140000, 130000, 120000, 110000, 100000, 95000],
+            backgroundColor: 'rgba(239, 68, 68, 0.6)',
+            borderColor: 'rgba(239, 68, 68, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { display: true } },
+          scales: { y: { beginAtZero: false } }
+        }
+      });
+
+      const failureRateChart = new Chart(document.getElementById('failureRateChart'), {
+        type: 'line',
+        data: {
+          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+          datasets: [{
+            label: 'PCBA Failure Rate (%)',
+            data: [9.56, 8.8, 8.2, 7.5, 6.9, 6.5],
+            backgroundColor: 'rgba(16, 185, 129, 0.2)',
+            borderColor: 'rgba(16, 185, 129, 1)',
+            borderWidth: 2,
+            tension: 0.3,
+            fill: true,
+            pointRadius: 5,
+            pointHoverRadius: 7
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { display: true } },
+          scales: { y: { beginAtZero: false } }
+        }
+      });
+    </script>
+  </body>
+</html><!-- index.html será preenchido com o conteúdo final -->
