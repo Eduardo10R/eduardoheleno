@@ -219,6 +219,53 @@
           scales: { y: { beginAtZero: false } }
         }
       });
-    </script>
+    </script><div id="capaModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-60">
+  <div class="bg-white rounded-xl shadow-lg max-w-2xl w-full p-8 relative animate-fade-in">
+    <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-black">✕</button>
+    <h2 class="text-2xl font-bold mb-4">CAPA-Driven Reduction of PCBA Failures</h2>
+    <div id="capaTabs" class="mb-4 flex space-x-4 border-b">
+      <button class="tab-btn font-medium py-2" onclick="switchTab('challenge')">Challenge</button>
+      <button class="tab-btn font-medium py-2" onclick="switchTab('analysis')">Root Cause Analysis</button>
+      <button class="tab-btn font-medium py-2" onclick="switchTab('actions')">Actions Taken</button>
+      <button class="tab-btn font-medium py-2" onclick="switchTab('results')">Results</button>
+    </div>
+    <div id="capaContent">
+      <div class="tab-pane" id="tab-challenge">
+        <p class="text-gray-700">In 2023, PCBA failure rate at final testing exceeded 9.5%, affecting delivery timelines and customer confidence. A cross-functional task force was deployed to analyze, mitigate and prevent defects at the root cause level.</p>
+      </div>
+      <div class="tab-pane hidden" id="tab-analysis">
+        <p class="text-gray-700">Through a combination of Pareto, Fishbone, and 5 Whys, the main contributors were identified: soldering inconsistency, board warpage after reflow, and misalignment due to stencil wear. Data was confirmed via DOE and reflow profiling.</p>
+      </div>
+      <div class="tab-pane hidden" id="tab-actions">
+        <p class="text-gray-700">Implemented stencil replacement policy, reflow recipe tuning, operator retraining, and inline inspection triggers. CAPAs were validated through pilot production over 6 weeks with data tracked in JMP and Minitab.</p>
+      </div>
+      <div class="tab-pane hidden" id="tab-results">
+        <p class="text-gray-700">Results: PCBA Failure Rate ↓ 32%, FPY ↑ 15%, Scrap cost ↓ €45.000. Monitoring plan sustained improvements for over 4 months. Project highlighted in corporate quality review as benchmark initiative.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById('capaModal').classList.remove('hidden');
+}
+function closeModal() {
+  document.getElementById('capaModal').classList.add('hidden');
+}
+function switchTab(tab) {
+  const tabs = ['challenge', 'analysis', 'actions', 'results'];
+  tabs.forEach(t => {
+    document.getElementById(`tab-${t}`).classList.add('hidden');
+  });
+  document.getElementById(`tab-${tab}`).classList.remove('hidden');
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('border-b-2', 'border-blue-600'));
+  event.target.classList.add('border-b-2', 'border-blue-600');
+}
+</script>
+
+<!-- Substituir botão original por este com modal -->
+<span class="mt-6 inline-block text-sm font-medium text-blue-500 group-hover:underline cursor-pointer" onclick="openModal()">View case →</span>
+<!-- Código original continua abaixo -->
   </body>
 </html><!-- index.html será preenchido com o conteúdo final -->
