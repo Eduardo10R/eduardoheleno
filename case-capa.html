@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAPA Case Study – Eduardo Heleno</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        scroll-behavior: smooth;
+      }
+      
+      .gradient-bg {
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      }
+      
+      .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+      
+      .stat-card {
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .stat-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, #10b981, #34d399);
+      }
+      
+      .chart-container {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <!-- Hero -->
+    <section class="min-h-[70vh] flex flex-col justify-center items-center px-6 text-center gradient-bg text-white">
+      <div class="max-w-4xl mx-auto" data-aos="fade-up">
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-8">
+          The €2M Recovery Mission
+        </h1>
+        <div class="w-24 h-1 bg-blue-500 mx-auto mb-8"></div>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-300">
+          How a 90-day turnaround saved a top-tier contract and redefined strategic quality leadership.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-24 px-6">
+      <div class="max-w-5xl mx-auto space-y-16">
+        <!-- The Challenge -->
+        <div data-aos="fade-up" class="card bg-white rounded-lg shadow-xl p-12">
+          <h2 class="text-3xl font-bold mb-8 text-gray-800 border-b pb-4">The Challenge</h2>
+          <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+            Our Class 2 cleanroom line was producing PCBA assemblies with a failure rate of 9.56%. This posed a €2M business risk through increased scrap and rework, delayed deliveries, and damaged client confidence.
+          </p>
+          <p class="text-gray-700 text-lg leading-relaxed">
+            A critical audit was approaching and the client issued a conditional warning: fix the issue within 90 days or risk losing future orders.
+          </p>
+        </div>
+
+        <!-- Strategic Approach -->
+        <div data-aos="fade-up" class="card bg-white rounded-lg shadow-xl p-12">
+          <h2 class="text-3xl font-bold mb-8 text-gray-800 border-b pb-4">Strategic Approach</h2>
+          <div class="space-y-10">
+            <div class="grid md:grid-cols-3 gap-8">
+              <div class="p-6 bg-gray-50 rounded-lg">
+                <div class="text-blue-600 font-semibold mb-1 text-sm tracking-wider uppercase">Phase 1</div>
+                <h3 class="text-xl font-semibold mb-4 text-gray-800">Root Cause Mapping</h3>
+                <p class="text-gray-700">
+                  MES data + Gemba walks + Ishikawa exposed ambiguous work instructions as a top issue, affecting shift consistency.
+                </p>
+              </div>
+              
+              <div class="p-6 bg-gray-50 rounded-lg">
+                <div class="text-blue-600 font-semibold mb-1 text-sm tracking-wider uppercase">Phase 2</div>
+                <h3 class="text-xl font-semibold mb-4 text-gray-800">CAPA Governance</h3>
+                <p class="text-gray-700">
+                  Daily tier meetings aligned with visual dashboard. Ownership and KPIs were defined for every CAPA action.
+                </p>
+              </div>
+              
+              <div class="p-6 bg-gray-50 rounded-lg">
+                <div class="text-blue-600 font-semibold mb-1 text-sm tracking-wider uppercase">Phase 3</div>
+                <h3 class="text-xl font-semibold mb-4 text-gray-800">Precision Execution</h3>
+                <p class="text-gray-700">
+                  Used existing resources, trained all shifts under IPC Class 2 and redesigned inspection flows — all without extra budget.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results -->
+        <div data-aos="fade-up" class="card bg-white rounded-lg shadow-xl p-12">
+          <h2 class="text-3xl font-bold mb-8 text-gray-800 border-b pb-4">Results</h2>
+          <div class="grid md:grid-cols-4 gap-6">
+            <div class="stat-card bg-white shadow p-6 text-center rounded-lg">
+              <p class="text-gray-600 text-sm mb-2 font-medium">PCBA Failure Rate</p>
+              <p class="text-3xl font-bold text-green-600">-32%</p>
+            </div>
+            
+            <div class="stat-card bg-white shadow p-6 text-center rounded-lg">
+              <p class="text-gray-600 text-sm mb-2 font-medium">First Pass Yield</p>
+              <p class="text-3xl font-bold text-green-600">+15%</p>
+            </div>
+            
+            <div class="stat-card bg-white shadow p-6 text-center rounded-lg">
+              <p class="text-gray-600 text-sm mb-2 font-medium">Cost Savings</p>
+              <p class="text-3xl font-bold text-green-600">€45K</p>
+            </div>
+            
+            <div class="stat-card bg-white shadow p-6 text-center rounded-lg">
+              <p class="text-gray-600 text-sm mb-2 font-medium">Audit Findings</p>
+              <p class="text-3xl font-bold text-green-600">Zero</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sustaining the Gains -->
+        <div data-aos="fade-up" class="card bg-white rounded-lg shadow-xl p-12">
+          <h2 class="text-3xl font-bold mb-8 text-gray-800 border-b pb-4">Sustaining the Gains</h2>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <h3 class="text-lg font-semibold mb-3 text-gray-800">Process Integration</h3>
+              <p class="text-gray-700">CAPAs embedded into Daily Management Boards with clear ownership and measurable KPIs.</p>
+            </div>
+            
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <h3 class="text-lg font-semibold mb-3 text-gray-800">Knowledge Transfer</h3>
+              <p class="text-gray-700">Reinforced multilingual training programs across all production shifts.</p>
+            </div>
+            
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <h3 class="text-lg font-semibold mb-3 text-gray-800">Standardization</h3>
+              <p class="text-gray-700">Deployed standardized checklists and implemented recurring visual audits.</p>
+            </div>
+            
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <h3 class="text-lg font-semibold mb-3 text-gray-800">Performance Tracking</h3>
+              <p class="text-gray-700">Implemented live dashboards for tracking FPY and potential failure modes.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Career Impact -->
+        <div data-aos="fade-up" class="card bg-white rounded-lg shadow-xl p-12">
+          <h2 class="text-3xl font-bold mb-8 text-gray-800 border-b pb-4">Career Impact</h2>
+          <div class="text-lg text-gray-700 leading-relaxed space-y-4">
+            <p>
+              This project redefined my role from executor to strategic quality leader — orchestrating cross-functional initiatives, influencing with data, and delivering transformation under pressure.
+            </p>
+            <p>
+              The methodologies developed during this critical recovery mission have since become standard practice across multiple production lines, contributing to sustained quality improvements company-wide.
+            </p>
+          </div>
+        </div>
+
+        <!-- Visualizations -->
+        <div data-aos="fade-up">
+          <h2 class="text-3xl font-bold mb-8 text-gray-800 text-center">Visual Impact</h2>
+          <div class="grid md:grid-cols-2 gap-10">
+            <div class="chart-container">
+              <h3 class="text-lg font-medium mb-4 text-gray-700">First Pass Yield Improvement</h3>
+              <canvas id="fpyChart"></canvas>
+            </div>
+            
+            <div class="chart-container">
+              <h3 class="text-lg font-medium mb-4 text-gray-700">Scrap Cost Reduction</h3>
+              <canvas id="scrapChart"></canvas>
+            </div>
+          </div>
+          
+          <div class="mt-10 chart-container">
+            <h3 class="text-lg font-medium mb-4 text-gray-700">PCBA Failure Rate Reduction</h3>
+            <canvas id="failureRateChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back Navigation -->
+    <div class="text-center py-16">
+      <a href="index.html" class="inline-block px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-300">
+        Back to Portfolio
+      </a>
+    </div>
+
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        duration: 800,
+        offset: 100
+      });
+    </script>
+
+    <!-- Chart.js Script -->
+    <script>
+      // Chart options global config
+      const chartOptions = {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            backgroundColor: 'rgba(255, 255, 255, 0.9)',
+            titleColor: '#1f2937',
+            bodyColor: '#1f2937',
+            borderColor: '#e5e7eb',
+            borderWidth: 1,
+            cornerRadius: 8,
+            padding: 12,
+            boxPadding: 6
+          }
+        }
+      };
+      
+      // FPY Chart
+      const fpyChart = new Chart(document.getElementById('fpyChart'), {
+        type: 'line',
+        data: {
+          labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+          datasets: [{
+            label: 'First Pass Yield (%)',
+            data: [82, 85, 89, 92, 96, 97],
+            backgroundColor: 'rgba(59, 130, 246, 0.15)',
+            borderColor: 'rgba(59, 130, 246, 0.8)',
+            borderWidth: 3,
+            tension: 0.4,
+            fill: true,
+            pointRadius: 4,
+            pointHoverRadius: 6,
+            pointBackgroundColor: 'rgba(59, 130, 246, 1)'
+          }]
+        },
+        options: {
+          ...chartOptions,
+          plugins: {
+            ...chartOptions.plugins,
+            tooltip: {
+              ...chartOptions.plugins.tooltip,
+              callbacks: {
+                label: ctx => `${ctx.raw}% FPY`
+              }
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              max: 100,
+              grid: {
+                color: 'rgba(224, 224, 224, 0.2)'
+              }
+            },
+            x: {
+              grid: {
+                display: false
+              }
+            }
+          }
+        }
+      });
+
+      // Scrap Chart
+      const scrapChart = new Chart(document.getElementById('scrapChart'), {
+        type: 'bar',
+        data: {
+          labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+          datasets: [{
+            label: 'Scrap Cost (€)',
+            data: [140000, 130000, 120000, 110000, 100000, 95000],
+            backgroundColor: 'rgba(239, 68, 68, 0.7)',
+            borderColor: 'rgba(239, 68, 68, 0.9)',
+            borderWidth: 1,
+            borderRadius: 4
+          }]
+        },
+        options: {
+          ...chartOptions,
+          plugins: {
+            ...chartOptions.plugins,
+            tooltip: {
+              ...chartOptions.plugins.tooltip,
+              callbacks: {
+                label: ctx => `€${ctx.raw.toLocaleString()}`
+              }
+            }
+          },
+          scales: {
+            y: {
+              grid: {
+                color: 'rgba(224, 224, 224, 0.2)'
+              }
+            },
+            x: {
+              grid: {
+                display: false
+              }
+            }
+          }
+        }
+      });
+
+      // Failure Rate Chart
+      const failureRateChart = new Chart(document.getElementById('failureRateChart'), {
+        type: 'line',
+        data: {
+          labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+          datasets: [{
+            label: 'Failure Rate (%)',
+            data: [9.56, 8.8, 8.2, 7.5, 6.9, 6.5],
+            backgroundColor: 'rgba(16, 185, 129, 0.15)',
+            borderColor: 'rgba(16, 185, 129, 0.8)',
+            borderWidth: 3,
+            tension: 0.4,
+            fill: true,
+            pointRadius: 4,
+            pointHoverRadius: 6,
+            pointBackgroundColor: 'rgba(16, 185, 129, 1)'
+          }]
+        },
+        options: {
+          ...chartOptions,
+          plugins: {
+            ...chartOptions.plugins,
+            tooltip: {
+              ...chartOptions.plugins.tooltip,
+              callbacks: {
+                label: ctx => `${ctx.raw}% Failure Rate`
+              }
+            }
+          },
+          scales: {
+            y: {
+              grid: {
+                color: 'rgba(224, 224, 224, 0.2)'
+              }
+            },
+            x: {
+              grid: {
+                display: false
+              }
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
